@@ -268,6 +268,13 @@ h1 span {
     width: 50%;
     float: left;
 }
+
+.mobilePic {
+    max-width: 100%;
+    min-width: 100%;
+    display: none;
+}
+
 .description2Container {
     /* border: 1px solid red; */
     width: calc(50%);
@@ -490,10 +497,72 @@ footer p {
     }
 }
 
-@media(max-width: 425px) {
+@media(max-width: 426px) {
     header {
         background-image: url("../mobileAssets/image-1-mobile.png");
         background-size: cover;
         background-position: right 0%;
     }
+
+    .wrapper {
+        width: 90%;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.875rem;
+    }
+
+    .galleryContainer img {
+        max-width: calc(50% - 3%);
+        min-width: calc(50% - 3%);
+        float: left;
+    }
+
+    .galleryPic3 {
+        display: none;
+    }
+
+    .catologue,
+    .events,
+    .collaborations {
+        width: 100%;
+    }
+
+    .desktopPic {
+        display: none;
+    }
+
+    .mobilePic {
+        max-width: 100%;
+        min-width: 100%;
+        display: block;
+    }
+
+    .menu {
+        width: 100%;
+        float: none;
+    }
+
+    .menu li {
+        display: inline;
+        font-size: 1rem;
+        margin-right: 5%;
+    }
+
+    .subscribe,
+    .subscribe input,
+    .subscribe button {
+        width: 100%;
+    }
+
+
 }
