@@ -7,7 +7,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 .visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
 
-/* Styles */
+/* My Styles */
 
 * {
     margin: 0;
@@ -39,14 +39,15 @@ h2 {
 
 h3 {
     font-family: Italiana;
-    font-size: 30px;
+    font-size: 1.875rem;
     color: #ffffff;
     text-transform: uppercase;
 }
 
 h4 {
     font-family: Italiana;
-    font-size: 25px;
+    font-size: 1.5625rem;
+    text-transform: uppercase;
 }
 
 li {
@@ -93,12 +94,11 @@ header .menuBar {
     top: 25px;
     right: 25px;
     font-size: 1.8125rem;
-    color: white;
+    color: #ffffff;
     visibility: hidden;
 }
 
 .logo {
-    /* display: inline; */
     text-align: right;
     white-space: nowrap;
     position: relative;
@@ -130,7 +130,6 @@ h1 span {
 
 .icons {
     text-align: center;
-    /* border: 1px solid white; */
     width: 5%;
     float: right;
     position: absolute;
@@ -139,7 +138,7 @@ h1 span {
 }
 
 .icons i {
-    color: white;
+    color: #ffffff;
     font-size: 1.5rem;
     display: block;
     margin: 10px;
@@ -167,7 +166,7 @@ h1 span {
 .right {
     width: calc(100% - 30% - 3%);
     float: left;
-    color: white;
+    color: #ffffff;
     /* border: 1px solid red; */
 }
 
@@ -228,11 +227,10 @@ h1 span {
 /* Products Styles */
 .products {
     background-color: #201e1f;
-    color: white;
+    color: #ffffff;
 }
 
 .description1Container {
-    /* border: 1px solid red; */
     width: calc(50%);
     float: left;
     padding: 7% 0 3%;
@@ -269,7 +267,8 @@ h1 span {
     min-width: 100%;
 }
 
-.product1Pic, .product2Pic {
+.product1Pic, 
+.product2Pic {
     width: 50%;
     float: right;
 }
@@ -286,7 +285,6 @@ h1 span {
 }
 
 .description2Container {
-    /* border: 1px solid red; */
     width: calc(50%);
     float: left;
     padding: 7% 0 5%;
@@ -296,7 +294,7 @@ h1 span {
 .stayUpdated {
     background-image: url("../desktopAssets/image-5.png");
     background-size: cover;
-    color: white;
+    color: #ffffff;
 }
 
 .stayUpdated .wrapper {
@@ -304,14 +302,13 @@ h1 span {
 }
 
 .menu {
-    /* border: 1px solid red; */
     width: 24%;
     float: left;
     text-transform: uppercase;
 }
 
 .menu li {
-    color: white;
+    color: #ffffff;
     display: block;
     font-size: 1.0625rem;
     padding-bottom: 10px;
@@ -322,7 +319,6 @@ h1 span {
 }
 
 .subscribe {
-    /* border: 1px solid blue; */
     width: 49%;
     float: left;
     text-align: center;
@@ -342,6 +338,7 @@ h1 span {
     height: 40px;
     width: 75%;
     float: left;
+    text-align: center;
 }
 
 .subscribe button {
@@ -349,8 +346,10 @@ h1 span {
     height: 40px;
     background-color: #000000;
     border: 1px solid #000000;
-    color: white;
+    color: #ffffff;
     text-transform: uppercase;
+    font-family: italiana;
+    font-size: 1.125rem; 
 }
 
 .contact {
@@ -412,8 +411,8 @@ footer p {
     }
 }
 
+/* IPad/Tablet Responsiveness */
 @media(max-width: 1096px) {
-
     .logo {
         text-align: right;
         white-space: nowrap;
@@ -441,18 +440,20 @@ footer p {
         color: #ffffff;
         padding: 10px 10px;
     }
-    
+
+    .menu {
+        width: 20%;
+    }
+
+    .contact {
+        float: right;
+    }
 }
 
 @media(max-width: 1024px) {
-    /* header h1 {
-        font-size: 6rem;
-    } */
-
     h2 {
         font-size: 1.5rem;
     }
-
 }
 
 @media(max-width:970px) {
@@ -489,23 +490,13 @@ footer p {
         float: left;
     }
 
-
     .product1Pic,
     .product2Pic {
         width: 100%;
     }
 
-    .product2Pic {
-        /* float: right; */
-    }
-
     h2 {
     font-size: 2.5rem;
-    }
-
-    .textContainer1 p,
-    .textContainer2 p {
-        font-size: 1.5rem;
     }
 
     .galleryContainer img {
@@ -523,14 +514,7 @@ footer p {
         float: right;
     }
 
-    .galleryPic3 {
-        display: none;
-    }
-
-    
-
-
-
+    .galleryPic3,
     .desktopPic {
         display: none;
     }
@@ -587,17 +571,26 @@ footer p {
     .phoneNumber {
         display: inline;
     }
+
+    .stayUpdated .wrapper {
+        padding: 5% 0;
+    }
+
+    .subscribe {
+        padding: 5% 0;
+    }
+
+    .subscribe button {
+        font-size: 1.5rem; 
+    }
+
 }
 
-
-
 @media(max-width: 768px) {
-    
-    /* header {
-        background-image: url("../mobileAssets/image-1-mobile@3x.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-    } */
+
+    header h1 {
+        font-size: 6rem;
+    }
 
     header .menuBar {
         visibility: visible;
@@ -625,14 +618,6 @@ footer p {
         display: none;
     }
 
-    /* .left {
-        width: 100%;
-    }
-
-    .right {
-        width: 100%;
-    } */
-
     .catologue {
         padding-top: 15%;
     }
@@ -657,15 +642,20 @@ footer p {
         text-align: left;
     }
 
-    .stayUpdated .wrapper {
-        padding: 5% 0;
-    }
-
-    .subscribe {
-        padding: 5% 0;
-    }
-
 }
+
+@media(max-width: 570px) {
+    .logo {
+        top: 140px;
+        left: -150px;
+    }
+
+    .logo h1 {
+        font-size: 5.75rem;
+    }
+}
+
+/* Mobile Responsiveness */
 
 @media(max-width: 426px) {
     header {
@@ -676,6 +666,10 @@ footer p {
 
     .wrapper {
         width: 90%;
+    }
+
+    .logo h1 {
+        font-size: 4.75rem;
     }
 
     
@@ -715,30 +709,6 @@ footer p {
         padding: 10% 0 15%;
     }
 
-    /* .galleryContainer img {
-        max-width: calc(50% - 3%);
-        min-width: calc(50% - 3%);
-        float: left;
-    }
-
-    .galleryPic3 {
-        display: none;
-    } */
-
-    /* .catologue {
-        padding-top: 15%;
-    }
-
-    .collaborations {
-        padding-bottom: 15%;
-    }
-
-    .catologue,
-    .events,
-    .collaborations {
-        width: 100%;
-    } */
-
     .desktopPic {
         display: none;
     }
@@ -786,13 +756,46 @@ footer p {
 
     .contact {
         width: 100%;
+        padding: 4% 0 3%;
     }
     .contact h4,
     .contact p {
         text-align:center;
     }
 
+    .subscribe h4,
+    .contact h4 {
+        font-size: 1.25rem;
+    }
+
+    .subscribe p,
+    .contact p {
+        font-size: .75rem;
+    }
+
     .phoneNumber {
         display: inline;
+    }
+}
+
+@media(max-width: 375px) {
+    .logo h1 {
+        font-size: 3.5rem;
+    }
+
+    .menu li {
+        font-size: .9rem;
+    }
+
+    h2,
+    .textContainer1 h2,
+    .textContainer2 h2 {
+        font-size: 1.5rem;
+    }
+
+    .textContainer1 p,
+    .textContainer2 p,
+    .right p {
+        font-size: 1rem;
     }
 }
